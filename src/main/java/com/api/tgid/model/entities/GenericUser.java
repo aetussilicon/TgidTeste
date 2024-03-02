@@ -1,9 +1,6 @@
 package com.api.tgid.model.entities;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.UUID;
@@ -20,10 +17,14 @@ public abstract class GenericUser {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID geid;
     private String name;
+
+    @Column(name = "tax_number" )
     private String taxNumber;
-    private String address;
-    private String postalCode;
+//    private String postalCode;
     private String email;
+    private String password;
+
+    @Column(name = "phone_number")
     private String phoneNumber;
     private float balance;
 
