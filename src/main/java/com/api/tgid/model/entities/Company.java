@@ -11,12 +11,8 @@ import lombok.Setter;
 @Setter
 public class Company extends GenericUser {
 
-    private String companyName;
     private String businessName;
     private int systemFee;
     //TODO histórico de transções
-    @Override
-    public String getName() {
-        return companyName;
-    }
+
 }
