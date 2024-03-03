@@ -1,5 +1,5 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/cosmic?currentSchema=tgid
-    username : foxbat
-    password : 92duwt96
+    url: ${POSTGRES_JDBC}?currentSchema=tgid
+    username : ${POSTGRES_USER}
+    password : ${POSTGRES_PASSWD}
