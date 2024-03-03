@@ -21,7 +21,7 @@ public class CompanyService {
     private final UsernameGenerator usernameGenerator;
     private final CNPJValidatorService taxNumberValidator;
 
-    private Company checkCompanyInDatabase(String username) {
+    protected Company checkCompanyInDatabase(String username) {
         Optional<Company> checkInDatabase = companyRepository.findCompanyByUsername(username);
         if (checkInDatabase.isPresent()) {
             return checkInDatabase.get();

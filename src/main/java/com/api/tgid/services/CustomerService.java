@@ -20,12 +20,14 @@ public class CustomerService {
     private final CustomerMapper mapper;
     private final UsernameGenerator usernameGenerator;
     private final CPFValidatorService cpfValidator;
+    private final TransactionalService transactionalService;
 
-    private Customer checkCustomerInDatabase(String username) {
+    protected Customer checkCustomerInDatabase(String username) {
         Optional<Customer> checkInDatabase = repository.findCustomerByUsername(username);
         if (checkInDatabase.isPresent()) {
             return checkInDatabase.get();
-        } throw new RuntimeException("Cliente não encontrado!");
+        }
+        throw new RuntimeException("Cliente não encontrado!");
     }
 
     public Customer signUpCustomer(CustomerSighUpDto customerSighUpDto) {
@@ -60,7 +62,7 @@ public class CustomerService {
         return checkedCustomer;
     }
 
-    public CustomerDto listCustomer (String username) {
+    public CustomerDto listCustomer(String username) {
         return mapper.customerModelToDto(checkCustomerInDatabase(username));
     }
 
