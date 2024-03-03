@@ -17,6 +17,7 @@ public abstract class GenericUser {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID geid;
     private String name;
+    private String username;
 
     @Column(name = "tax_number" )
     private String taxNumber;

@@ -13,9 +13,13 @@ public class CompanyService {
 
     private final CompanyRepository companyRepository;
     private final CompanyMapper companyMapper;
+    private final UsernameGenerator usernameGenerator;
 
     public Company signUpCompany(CompanySighUpDto companySighUpDto) {
+        companySighUpDto.setUsername(usernameGenerator.usernameGenerator(companySighUpDto.getName()));
         return companyRepository.save(companyMapper.signUpCompanyDtoToModel(companySighUpDto));
     }
+
+
 
 }

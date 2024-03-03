@@ -13,6 +13,7 @@ public abstract class GenericUserSignUpDto {
 
     private UUID geid;
     @NotNull private String name;
+    private String username;
     @NotNull private String taxNumber;
     @NotNull @Email private String email;
     @NotNull private String password;
