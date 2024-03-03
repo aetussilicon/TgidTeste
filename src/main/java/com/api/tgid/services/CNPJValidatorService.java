@@ -6,7 +6,7 @@ import br.com.caelum.stella.validation.InvalidStateException;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CNPJValidator {
+public class CNPJValidatorService {
 
    private String cnpjFormatter(String cnpj) {
         Formatter formatter = new CNPJFormatter();
