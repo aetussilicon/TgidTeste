@@ -9,6 +9,7 @@ import lombok.Setter;
 public abstract class GenericUserUpdateDto {
 
     private String name;
+    private String username;
     @Email private String email;
     private String password;
     private String phoneNumber;

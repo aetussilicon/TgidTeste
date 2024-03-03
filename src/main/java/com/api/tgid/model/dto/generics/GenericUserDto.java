@@ -8,6 +8,7 @@ import lombok.Setter;
 public abstract class GenericUserDto {
 
     private String name;
+    private String username;
     private String taxNumber;
     private String email;
     private String phoneNumber;
