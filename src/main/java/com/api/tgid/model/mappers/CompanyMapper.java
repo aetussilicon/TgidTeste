@@ -1,5 +1,6 @@
 package com.api.tgid.model.mappers;
 
+import com.api.tgid.model.dto.companies.CompanyDto;
 import com.api.tgid.model.dto.companies.CompanySighUpDto;
 import com.api.tgid.model.entities.Company;
 import org.mapstruct.Mapper;
@@ -16,4 +17,5 @@ public interface CompanyMapper {
     @Mapping(target = "geid", expression = "java(UUID.randomUUID())")
     Company signUpCompanyDtoToModel (CompanySighUpDto companySignUpDto);
 
+    CompanyDto companyModelToDto (Company company);
 }
