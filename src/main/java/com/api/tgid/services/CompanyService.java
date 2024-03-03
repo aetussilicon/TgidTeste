@@ -19,7 +19,7 @@ public class CompanyService {
     private final CompanyRepository companyRepository;
     private final CompanyMapper companyMapper;
     private final UsernameGenerator usernameGenerator;
-    private final CNPJValidator taxNumberValidator;
+    private final CNPJValidatorService taxNumberValidator;
 
     private Company checkCompanyInDatabase(String username) {
         Optional<Company> checkInDatabase = companyRepository.findCompanyByUsername(username);
