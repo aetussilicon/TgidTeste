@@ -12,5 +12,6 @@ public abstract class GenericUserUpdateDto {
     @Email private String email;
     private String password;
     private String phoneNumber;
+    private float balance;
 
 }
