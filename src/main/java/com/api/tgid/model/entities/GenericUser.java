@@ -3,6 +3,7 @@ package com.api.tgid.model.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @MappedSuperclass
@@ -27,6 +28,6 @@ public abstract class GenericUser {
 
     @Column(name = "phone_number")
     private String phoneNumber;
-    private float balance;
+    private BigDecimal balance;
 
 }

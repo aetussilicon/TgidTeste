@@ -5,6 +5,8 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Table(name = "companies")
 @Entity
 @Getter
@@ -12,7 +14,7 @@ import lombok.Setter;
 public class Company extends GenericUser {
 
     private String businessName;
-    private int systemFee;
+    private BigDecimal systemFee;
     //TODO histórico de transções
 
 }
